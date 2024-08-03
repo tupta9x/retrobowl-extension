@@ -1,0 +1,355 @@
+/*index.css*/
+body {
+  width: 750px; /* Phù hợp với chiều rộng của iframe-container */
+  height: 450px; /* Phù hợp với chiều cao của iframe-container */
+  margin: 0;
+  overflow: hidden; /* Thêm dòng này để ngăn cuộn */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+/*index.css*/
+body {
+  width: 750px; /* PhÃ¹ há»£p vá»›i chiá»u rá»™ng cá»§a iframe-container */
+  height: 450px; /* PhÃ¹ há»£p vá»›i chiá»u cao cá»§a iframe-container */
+  margin: 0;
+  overflow: hidden; /* ThÃªm dÃ²ng nÃ y Ä‘á»ƒ ngÄƒn cuá»™n */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+/*index.css*/
+body {
+  width: 750px; /* PhÃƒÂ¹ hÃ¡Â»Â£p vÃ¡Â»â€ºi chiÃ¡Â»Âu rÃ¡Â»â„¢ng cÃ¡Â»Â§a iframe-container */
+  height: 450px; /* PhÃƒÂ¹ hÃ¡Â»Â£p vÃ¡Â»â€ºi chiÃ¡Â»Âu cao cÃ¡Â»Â§a iframe-container */
+  margin: 0;
+  overflow: hidden; /* ThÃƒÂªm dÃƒÂ²ng nÃƒÂ y Ã„â€˜Ã¡Â»Æ’ ngÃ„Æ’n cuÃ¡Â»â„¢n */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* More elegant font */
+  overflow: hidden; /* Prevent scrollbars on the body */
+}
+
+/* App Container */
+.App {
+  background-color: #000; /* Default background for dark theme */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative; /* Position relative to contain absolute children */
+}
+.menu-toggle {
+  font-size: 19px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  color: #888; /* Màu của icon */
+  background-color: transparent; /* Nền trong suốt */
+  padding: 0; /* Xóa padding */
+  border: none; /* Xóa border */
+  border-radius: 50%; /* Hình tròn nếu cần */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1010;
+  width: 38px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+.menu-toggle:active {
+  transform: scale(1);
+}
+
+/* Game Menu */
+.game-menu {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #82ed11; /* Dark text for contrast */
+  border-radius: 0 12px 12px 0; /* Chỉ bo góc trên và dưới bên phải */
+  padding: 1rem;
+  width: 250px;
+  height: 94%;
+  overflow-y: auto; /* Enable vertical scrolling */
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Prevent interaction when hidden */
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: -1px; /* Adjust as needed to fit design */
+  z-index: 1000; /* Ensure it's above other content */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Light border for all sides */
+  border-width: 1px 0 1px 1px; /* Border only on the right side and bottom */
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; /* Set color for specific borders */
+}
+
+/* Menu Visibility */
+.game-menu.visible {
+  opacity: 1;
+  visibility: visible; /* Allow interaction when visible */
+}
+/* Search Container */
+.search-container {
+  position: sticky; /* Giữ thanh tìm kiếm cố định khi cuộn */
+  top: 20px; /* Khoảng cách từ trên cùng */
+  right: 10px; /* Khoảng cách từ bên phải */
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-bottom: 23px; /* Điều chỉnh để tránh bị che khuất */
+  width: calc(100% - 50px); /* Giảm chiều rộng để tránh bị chồng lên menu */
+  max-width: 220px; /* Giới hạn chiều rộng tối đa */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1020; /* Đảm bảo thanh tìm kiếm nằm trên các phần tử khác */
+}
+.search-input {
+  border: none; /* Tắt border mặc định */
+  outline: none; /* Tắt outline khi focus */
+  background: transparent;
+  color: #000;
+  padding: 5px;
+  flex: 1;
+  font-size: 14px;
+  width: calc(100% - 30px); /* Đảm bảo không bị chồng lên icon tìm kiếm */
+}
+
+.search-icon {
+  color: #888;
+  font-size: 18px;
+}
+
+/* Game Card */
+.game-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+  border-radius: 8px; /* More rounded corners */
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05); /* Slightly transparent background */
+}
+
+.game-card img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.game-card:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Slightly darker on hover */
+  transform: scale(1.02);
+}
+
+/* No Results Message */
+.no-results {
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Suggestions Section */
+.suggestions {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Suggestion Item */
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+.suggestion-item img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.suggestion-item a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.suggestion-item:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Slightly darker on hover */
+  border-radius: 4px;
+}
+
+/* iFrame Container */
+.iframe-container {
+  width: 750px;
+  height: 550px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: scaleIn 0.5s ease-in-out;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* Action Buttons Container */
+.action-buttons {
+  position: fixed; /* Fixed position for bottom-right alignment */
+  bottom: 10px; /* Distance from the bottom edge */
+  right: 10px; /* Distance from the right edge */
+  display: flex;
+  gap: 10px;
+  z-index: 1000; /* Ensures buttons stay on top of other elements */
+}
+
+.action-buttons button {
+  color: #000; /* Normal icon color */
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%; /* Circular button */
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.action-buttons button:active {
+  transform: scale(1);
+}
+
+/* Custom Scrollbar Styles */
+.game-menu::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.game-menu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2); /* Track color */
+}
+
+.game-menu::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Scrollbar thumb color */
+  border-radius: 8px; /* Rounded scrollbar thumb */
+}
+
+.game-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3); /* Darker on hover */
+}

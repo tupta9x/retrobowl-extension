@@ -1,0 +1,39 @@
+/*index.css*/
+body {
+  width: 750px; /* Phù hợp với chiều rộng của iframe-container */
+  height: 450px; /* Phù hợp với chiều cao của iframe-container */
+  margin: 0;
+  overflow: hidden; /* Thêm dòng này để ngăn cuộn */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  background-color: #ddd;
+  cursor: pointer;
+}
